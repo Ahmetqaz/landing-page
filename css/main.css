@@ -284,10 +284,12 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+}
+.main--grid {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 100%;
   padding-left: 270px;
 }
 
@@ -1071,7 +1073,7 @@ svg {
   height: calc(100% - 25px);
 }
 .sidebar._lg .sidebar__inner {
-  padding: 25px;
+  height: 100%;
 }
 
 .burger {

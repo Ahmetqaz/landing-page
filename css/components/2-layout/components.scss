@@ -1,9 +1,11 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   height: 100%;
-  padding-left: 270px;
+  &--grid {
+    align-items: flex-start;
+    padding-left: 270px;
+  }
 }
 .autoContainer {
   max-width: 1025px;
