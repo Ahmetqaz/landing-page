@@ -1,11 +1,12 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   height: 100%;
   padding-left: 270px;
 }
 .autoContainer {
-  max-width: 1074px;
+  max-width: 1025px;
   width: 100%;
   margin: 0 auto;
   padding: 0 25px;

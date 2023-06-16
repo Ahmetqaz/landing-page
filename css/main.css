@@ -284,12 +284,15 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   padding-left: 270px;
 }
 
 .autoContainer {
-  max-width: 1074px;
+  max-width: 1025px;
   width: 100%;
   margin: 0 auto;
   padding: 0 25px;
@@ -988,9 +991,16 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .sidebar__inner-logo img {
   width: 100%;
+}
+.sidebar__inner-logo:hover {
+  opacity: 0.7;
 }
 .sidebar__inner-group {
   display: -webkit-box;
@@ -1000,11 +1010,41 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 18px;
 }
 .sidebar__inner-link {
   font-size: 20px;
   color: #666666;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  position: relative;
+}
+.sidebar__inner-link:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #2a6495;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  -webkit-transform: translate(-50%) scale(0);
+          transform: translate(-50%) scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.sidebar__inner-link:hover {
+  color: #2a6495;
+}
+.sidebar__inner-link:hover:after {
+  -webkit-transform: translate(-50%) scale(1);
+          transform: translate(-50%) scale(1);
+  opacity: 1;
 }
 .sidebar__inner-copy {
   height: 370px;
@@ -1012,11 +1052,11 @@ svg {
   -webkit-transform-origin: left;
           transform-origin: left;
 }
-.sidebar__inner-copy p {
+.sidebar__inner-copy-text {
   width: 160%;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5px;
   font-size: 18px;
   color: #666666;
   -webkit-transform: rotate(-90deg);
@@ -1128,7 +1168,8 @@ svg {
 
 .grid {
   padding: 20px 0;
-  margin-right: auto;
+  max-width: 1025px;
+  width: 100%;
 }
 .grid__inner {
   display: -webkit-box;

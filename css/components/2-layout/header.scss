@@ -48,28 +48,55 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      @include transition;
       img {
         width: 100%;
+      }
+      &:hover {
+        opacity: 0.7;
       }
     }
     &-group {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 18px;
     }
     &-link {
       font-size: 20px;
       color: $black-2;
+      @include transition;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $primary;
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translate(-50%) scale(0);
+        opacity: 0;
+        @include transition;
+      }
+      &:hover {
+        color: $primary;
+        &:after {
+          transform: translate(-50%) scale(1);
+          opacity: 1;
+        }
+      }
     }
     &-copy {
       height: 370px;
       position: relative;
       transform-origin: left;
-      p {
+      &-text {
         width: 160%;
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 5px;
         font-size: 18px;
         color: $black-2;
         transform: rotate(-90deg);
