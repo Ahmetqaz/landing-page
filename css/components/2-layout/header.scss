@@ -1,13 +1,14 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0;
+  padding: 15px 0;
   z-index: 1;
   transition: 0.2s ease-out;
   transition-property: opacity, transform, padding;
-
+  background-color: $white;
+  border-bottom: 1px solid $gray;
   &__inner {
     position: relative;
     display: flex;
@@ -19,14 +20,14 @@
       display: none;
     }
   }
-
   &.sticky {
     position: fixed;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid rgba($secondary, 0.4);
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
   }
+  display: none;
 }
 .sidebar {
   flex-grow: 1;
@@ -36,15 +37,15 @@
   z-index: 5;
   height: 100%;
   width: 270px;
-  padding: 40px 25px 25px;
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 25px;
     width: 100%;
     position: relative;
+    padding: 40px 25px 25px;
     &-logo {
-      width: 220px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,29 +90,22 @@
       }
     }
     &-copy {
-      height: 370px;
-      position: relative;
-      transform-origin: left;
-      &-text {
-        width: 160%;
-        position: absolute;
-        bottom: 0;
-        left: 5px;
-        font-size: 18px;
-        color: $black-2;
-        transform: rotate(-90deg);
-        transform-origin: left;
-        font-style: italic;
-      }
+      font-size: 18px;
+      color: $black-2;
+      transform: rotate(180deg);
+      font-style: italic;
+      writing-mode: vertical-rl;
     }
   }
   &._lg {
     top: 25px;
     left: 25px;
     height: calc(100% - 25px);
+    padding: 25px;
     .sidebar {
       &__inner {
         height: 100%;
+        padding: unset;
       }
     }
   }
@@ -123,10 +117,9 @@
   font-size: 10px;
   width: 2.6em;
   height: 2em;
-  color: $white;
+  color: $primary;
   background: transparent;
   transition: 0.2s ease;
-
   span,
   &::after,
   &::before {
@@ -175,101 +168,69 @@
     }
   }
 }
-
-@mixin header-1025 {
-  .header {
-    padding: 25px 0;
-
+@mixin header-1240 {
+  .sidebar {
+    width: 250px;
     &__inner {
-      justify-content: space-between;
-
-      &-logo {
-        padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
+      padding: 35px 20px 20px;
+    }
+  }
+}
+@mixin header-1160 {
+  .sidebar {
+    width: 220px;
+    &__inner {
+      &-link {
+        font-size: 18px;
       }
+    }
+    &._lg {
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+@mixin header-840 {
+  .header {
+    display: block;
+    &__inner {
       .burger {
         display: block;
-        z-index: 2;
       }
     }
   }
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($black, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 0;
-    transform: translate(100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
-
-    &__inner {
-      position: absolute;
-      top: 0;
+  .sidebar {
+    &._burger {
+      position: fixed;
+      top: 51px;
       left: 0;
-      width: 35%;
-      min-width: 280px;
-      height: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      background: $white;
-      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
-      padding: 50px 25px;
-      transform: translate(-100%);
+      width: 100%;
+      height: calc(100% - 51px);
+      background: rgba($black, 0.4);
+      backdrop-filter: blur(4px);
+      transform: translate(100%);
       opacity: 0;
-      transition: 0.15s ease-in-out 0s;
-
-      &-group {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 25px 0;
-        gap: 8px;
-        color: $black;
-        border-top: 1px solid $white;
-        width: 100%;
-
-        &:first-child {
-          border: 0;
+      pointer-events: none;
+      transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+      .sidebar {
+        &__inner {
+          width: 220px;
+          height: 100%;
+          background: $white;
         }
       }
-      &-link {
-        color: $black;
-
-        &:after {
-          left: 0;
-          top: 50%;
-          width: 2px;
-          height: 80%;
-          transform: translateY(-50%);
-        }
-
-        &:hover {
-          color: $secondary;
-          &:after {
-            width: 2px;
-            height: 100%;
-          }
-        }
-      }
-    }
-
-    &.active {
-      pointer-events: all;
-      transform: translate(0);
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out;
-
-      .nav__inner {
-        opacity: 1;
-        transition: 0.3s ease-in-out 0.05s;
+      &.active {
+        pointer-events: all;
         transform: translate(0);
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+
+        .nav__inner {
+          opacity: 1;
+          transition: 0.3s ease-in-out 0.05s;
+          transform: translate(0);
+        }
       }
     }
   }

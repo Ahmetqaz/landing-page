@@ -1,35 +1,44 @@
-@media (max-width: 1280px) {
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+@media (max-width: 1240px) {
+  .autoContainer {
+    padding: 0 20px;
   }
+  @include typography-1240;
+  @include components-1240;
+  @include header-1240;
+  @include index-1240;
 }
 @media (max-width: 1160px) {
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
   }
+  @include components-1160;
+  @include header-1160;
+  @include index-1160;
 }
 @media (max-width: 1025px) {
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
   // @include header-1025;
 }
-
 @media (max-width: 940px) {
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
+}
+@media (max-width: 840px) {
+  @include components-840;
+  @include header-840;
+  @include index-840;
 }
 @media (max-width: 768px) {
 }
 @media (max-width: 580px) {
-  ._hideMob {
+  ::-webkit-scrollbar {
     display: none;
   }
+  .autoContainer {
+    padding: 0 15px;
+  }
+  @include index-580;
 }
 @media (max-width: 460px) {
+  @include typography-460;
+  @include components-460;
+  @include index-460;
 }

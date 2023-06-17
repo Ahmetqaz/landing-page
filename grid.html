@@ -12,7 +12,16 @@
 
 <body>
   <div class="main main--grid">
-    <nav class="sidebar">
+    <!-- #header -->
+    <header class="header">
+      <div class="autoContainer">
+        <div class="header__inner">
+          <div class="burger" id="menuBtn"></div>
+        </div>
+      </div>
+    </header>
+    <!-- #header end-->
+    <nav class="sidebar _burger" id="menu">
       <div class="sidebar__inner">
         <div class="sidebar__inner-logo">
           <img src="./images/logo.png" alt="">
@@ -42,6 +51,39 @@
         <div class="grid__inner">
           <div class="grid__inner-group">
             <div class="gridItem__wrapper">
+              <div class="gridItem tabBtn active" data-tab="#tab-1">
+                <div class="gridItem__image">
+                  <img src="./images/grid/grid-1.png" alt="">
+                </div>
+                <p class="sm">
+                  Installation
+                </p>
+              </div>
+              <div class="gridItem tabBtn" data-tab="#tab-2">
+                <div class="gridItem__image">
+                  <img src="./images/grid/grid-2.png" alt="">
+                </div>
+                <p class="sm">
+                  Sculpture
+                </p>
+              </div>
+              <div class="gridItem tabBtn" data-tab="#tab-3">
+                <div class="gridItem__image">
+                  <img src="./images/grid/grid-3.png" alt="">
+                </div>
+                <p class="sm">
+                  Wall Hanging
+                </p>
+              </div>
+              <div class="gridItem tabBtn" data-tab="#tab-4">
+                <div class="gridItem__image">
+                  <img src="./images/grid/grid-4.png" alt="">
+                </div>
+                <p class="sm">
+                  Perfomance
+                </p>
+              </div>
+
               <div class="gridItem">
                 <div class="gridItem__image">
                   <img src="./images/grid/grid-1.png" alt="">
@@ -52,7 +94,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/1.png" alt="">
+                  <img src="./images/grid/grid-2.png" alt="">
                 </div>
                 <p class="sm">
                   Sculpture
@@ -60,7 +102,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/2.png" alt="">
+                  <img src="./images/grid/grid-3.png" alt="">
                 </div>
                 <p class="sm">
                   Wall Hanging
@@ -68,7 +110,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/3.png" alt="">
+                  <img src="./images/grid/grid-4.png" alt="">
                 </div>
                 <p class="sm">
                   Perfomance
@@ -84,7 +126,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/1.png" alt="">
+                  <img src="./images/grid/grid-2.png" alt="">
                 </div>
                 <p class="sm">
                   Sculpture
@@ -92,7 +134,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/2.png" alt="">
+                  <img src="./images/grid/grid-3.png" alt="">
                 </div>
                 <p class="sm">
                   Wall Hanging
@@ -100,71 +142,7 @@
               </div>
               <div class="gridItem">
                 <div class="gridItem__image">
-                  <img src="./images/grid--scroll/3.png" alt="">
-                </div>
-                <p class="sm">
-                  Perfomance
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid/grid-1.png" alt="">
-                </div>
-                <p class="sm">
-                  Installation
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/1.png" alt="">
-                </div>
-                <p class="sm">
-                  Sculpture
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/2.png" alt="">
-                </div>
-                <p class="sm">
-                  Wall Hanging
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/3.png" alt="">
-                </div>
-                <p class="sm">
-                  Perfomance
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid/grid-1.png" alt="">
-                </div>
-                <p class="sm">
-                  Installation
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/1.png" alt="">
-                </div>
-                <p class="sm">
-                  Sculpture
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/2.png" alt="">
-                </div>
-                <p class="sm">
-                  Wall Hanging
-                </p>
-              </div>
-              <div class="gridItem">
-                <div class="gridItem__image">
-                  <img src="./images/grid--scroll/3.png" alt="">
+                  <img src="./images/grid/grid-4.png" alt="">
                 </div>
                 <p class="sm">
                   Perfomance
@@ -173,7 +151,7 @@
             </div>
           </div>
           <div class="grid__inner-content">
-            <div class="gridContent">
+            <div class="gridContent tabEvent active" id="tab-1">
               <div class="gridContent__body">
                 <div class="gridContent__body-image">
                   <img src="./images/grid/grid-1.png" alt="">
@@ -207,41 +185,146 @@
                   </a>
                 </div>
               </div>
-              <p>
-                <strong>
-                  David Deporis, Oakland, CA
-                </strong>
-                <br>
-                2022
-                <br><br>
-                This is a portrait of gifted songwriter and performer Dave Deporis who was prominent in the Oakland
-                music scene as well as in NY music venues. He was robbed of his laptop and killed clinging to the
-                robber’s car in 2017.
-                <br><br>
-                This installation is meant to both capture a moment in time as well as timelessness. Dave’s own song
-                lyrics provided the symbolic images of his death including the body outline (painted on a vinyl fabric
-                picture of the street where Dave was killed), ashes in the suitcase, and plywood door. These specific
-                lyrics can be read on handout sheets on the floor along with an article about his career. Among these
-                handouts are strewn California oak leaves, eucalyptus leaves (both also takeaways) and, from an aroma
-                source, an ocean smell whch connects to places Dave lived in and loved. The laptop signifys the one
-                stolen from him in his final moments with perhaps his last songs that tragically will never be known.
-                The red car fender-like piece represents the cause of his death. The video and handouts are only
-                accessed by walking around and into the art piece to view it and take the leaves, song lyrics and
-                article sheets.
-                <br><br>
-                Music by Dave Deporis. Videos by Dave Deporis and Scott MacDonald. Editing by Kelly Craven. Article on
-                Dave’s story by Peter Himmelman. See article online at:
-                https://peterhimmelman.substack.com/p/a-story-of-a-musician-youve-never
-                <br><br>
-                Special Thanks to Stella Deporis for her guidance, support, and permisson to use her copyrighted
-                material of Dave’s work.
-                <br><br>
-                Painted sheet metal, printed vinyl fabric, acrylic paint, distressed plywood, suitcase, laptop, ashes,
-                letter paper with printed song lyrics, stones, California oak leaves, eucalyptus bark and leaves
-                impregnated with eucalyptus oil, georgette fabric, pico projector, media player, cable, aroma diffuser,
-                synthetic ocean aroma oil, various hardware.
-                50” x 72” x 80”
-              </p>
+              <div class="gridContent__box">
+                <p>
+                  <strong>
+                    David Deporis, Oakland, CA
+                  </strong>
+                  <br>
+                  2022
+                  <br><br>
+                  This is a portrait of gifted songwriter and performer Dave Deporis who was prominent in the Oakland
+                  music scene as well as in NY music venues. He was robbed of his laptop and killed clinging to the
+                  robber’s car in 2017.
+                  <br><br>
+                  This installation is meant to both capture a moment in time as well as timelessness. Dave’s own song
+                  lyrics provided the symbolic images of his death including the body outline (painted on a vinyl fabric
+                  picture of the street where Dave was killed), ashes in the suitcase, and plywood door. These specific
+                  lyrics can be read on handout sheets on the floor along with an article about his career. Among these
+                  handouts are strewn California oak leaves, eucalyptus leaves (both also takeaways) and, from an aroma
+                  source, an ocean smell whch connects to places Dave lived in and loved. The laptop signifys the one
+                  stolen from him in his final moments with perhaps his last songs that tragically will never be known.
+                  The red car fender-like piece represents the cause of his death. The video and handouts are only
+                  accessed by walking around and into the art piece to view it and take the leaves, song lyrics and
+                  article sheets.
+                  <br><br>
+                  Music by Dave Deporis. Videos by Dave Deporis and Scott MacDonald. Editing by Kelly Craven. Article on
+                  Dave’s story by Peter Himmelman. See article online at:
+                  <a href="#">
+                    https://peterhimmelman.substack.com/p/a-story-of-a-musician-youve-never
+                  </a>
+                  <br><br>
+                  Special Thanks to Stella Deporis for her guidance, support, and permisson to use her copyrighted
+                  material of Dave’s work.
+                  <br><br>
+                  Painted sheet metal, printed vinyl fabric, acrylic paint, distressed plywood, suitcase, laptop, ashes,
+                  letter paper with printed song lyrics, stones, California oak leaves, eucalyptus bark and leaves
+                  impregnated with eucalyptus oil, georgette fabric, pico projector, media player, cable, aroma
+                  diffuser,
+                  synthetic ocean aroma oil, various hardware.
+                  50” x 72” x 80”
+                </p>
+              </div>
+            </div>
+              <div class="gridContent _lg tabEvent" id="tab-2">
+              <div class="gridContent__body">
+                <div class="gridContent__body-image">
+                  <img src="./images/grid/grid-2.png" alt="">
+                </div>
+              </div>
+              <div class="gridContent__box">
+                <p>
+                  <strong>
+                    Chain of Thought: Portrait of  Fascism  
+                  </strong>
+                  <br>
+                  2021 
+                  <br><br>
+                  The chain can be pulled through all the heads to make an alarming, clattering sound.
+                  <br><br>
+                  Ceramic reinforced with epoxy and impregnated with synthetic gunpowder aroma oil, pewter paint, chains, various hardware. 12“ x 18” x 40”
+                  ”
+                </p>
+              </div>
+            </div>
+            <div class="gridContent _lg tabEvent" id="tab-3">
+              <div class="gridContent__body">
+                <div class="gridContent__body-image">
+                  <img src="./images/grid/grid-3.png" alt="">
+                </div>
+              </div>
+              <div class="gridContent__box">
+                <p>
+                  <strong>
+                    Rememory 
+                  </strong>
+                  <br>
+                  Self-portrait 
+                  <br>
+                  2019 
+                  <br><br>
+                  Prrofiles of the Artist at different ages in different materials mounted on a log that has various materials related to the various ages. A pico-projector displays life events that were ridiculous displays of ego.
+                  <br><br>
+                  Wood log, pico projector, sheet metal. acrylic sheet, buckram fabric, alcohol inks, acrylic paints, various blades, staples, paper clips, various glues, condom, various hardware. 9” x 16” x 24”
+                </p>
+              </div>
+            </div>
+            <div class="gridContent _lg tabEvent" id="tab-4">
+              <div class="gridContent__body">
+                <div class="gridContent__body-image">
+                  <img src="./images/grid/grid-4.png" alt="">
+                </div>
+              </div>
+              <div class="gridContent__box">
+                <p>
+                  <strong>
+                    Anderson Ranch Connector Portrait 8-5-22
+                  </strong>
+                  <br>
+                  Group interactive portrait
+                  <br>
+                  2022
+                  <br><br>
+                  This is a participatory, interactive artpiece where audience members in separate 6ft. fabric modules
+                  are linked together as a group to activate a giant expandable costume: the Connector. The underlying
+                  social goal is to encourage safe re-connection with people, partcularly in groups, after the isolation
+                  of covid. The group must learn together how to navigate and play together and in the process evolve ad
+                  hoc social contracts to foster communication and group consensus. Attached bells are a haptic device
+                  used for expression and play. Connector can grow into an ever-larger linked single assembly by adding
+                  more modules or break out into smaller internallylinked groups. The individual unit portability allows
+                  them to be easily transported and used in any open space. This is a contemporary reinterpretation of
+                  Lygia Pape’s 1968 one-sheet group piece Divisor but Connector adds vital social aspects of safe
+                  distancing and resocialization plus its module assembly provides easy expandability.
+                  <br><br>
+                  Printed vinyl fabric sheets, 36” x 72”and 36” x 144” pieces, plastic rings, metal binder rings,
+                  assorted small metal bells, fiber-reinforced tape. Overall size variable.
+                  <br><br>
+                  Photos and video by Trey Broomfeld.
+
+                </p>
+                <a class="video" href="#">
+                  <!-- <a href="#"></a> -->
+                  <p>
+                    https//vimeo/manage/videos/818236537/privacy
+                  </p>
+                  <div class="video__box">
+                    <div class="video__box-image">
+                      <img src="./images/grid/grid-4.png" alt="">
+                    </div>
+                    <div class="video__box-button">
+                      <svg height="30px" width="30px" version="1.1" id="Layer_1" viewBox="0 0 472.615 472.615"
+                        xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M236.308,0C105.799,0,0,105.798,0,236.308c0,130.507,105.799,236.308,236.308,236.308s236.308-105.801,236.308-236.308
+    C472.615,105.798,366.816,0,236.308,0z M139.346,347.733V124.88l229.37,111.428L139.346,347.733z" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
