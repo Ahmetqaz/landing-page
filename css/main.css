@@ -166,7 +166,7 @@
 }
 /* Typography */
 h6 {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 h1,
@@ -181,7 +181,7 @@ h6 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 1.2;
 }
 p strong {
@@ -195,6 +195,7 @@ p strong {
 html {
   height: 100%;
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 * {
@@ -776,11 +777,11 @@ svg {
 }
 
 @media (max-width: 1240px) {
+  html {
+    font-size: 18px;
+  }
   .autoContainer {
     padding: 0 20px;
-  }
-  p {
-    font-size: 18px;
   }
   .main--grid {
     padding-left: 250px;
@@ -950,7 +951,7 @@ svg {
   }
 }
 @media (max-width: 460px) {
-  p {
+  html {
     font-size: 16px;
   }
   .main--grid {

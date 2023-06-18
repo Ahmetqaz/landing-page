@@ -32,7 +32,7 @@ h4 {
 h5 {
 }
 h6 {
-  font-size: 20px;
+  font-size: 1rem;
 }
 h1,
 h2,
@@ -46,7 +46,7 @@ h6 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 1.2;
   strong {
     font-style: italic;
@@ -54,12 +54,12 @@ p {
 }
 
 @mixin typography-1240 {
-  p {
-    font-size: 18px;
-  }
+  // p {
+  //   font-size: 18px;
+  // }
 }
 @mixin typography-460{
-  p {
-    font-size: 16px;
-  }
+  // p {
+  //   font-size: 16px;
+  // }
 }
