@@ -801,6 +801,9 @@ svg {
 .content__image._bio img {
   margin-bottom: 0;
 }
+.content__image._low {
+  max-width: 670px;
+}
 .content__youtube {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -814,6 +817,7 @@ svg {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   cursor: pointer;
+  overflow: hidden;
 }
 .content__youtube p {
   font-size: 16px;
@@ -868,7 +872,7 @@ svg {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
-  max-width: 765px;
+  max-width: 875px;
 }
 .content__group .content__image {
   width: calc(50% - 11px);
@@ -884,6 +888,12 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.content__group._sm {
+  gap: 5px;
+}
+.content__group._sm .content__image {
+  width: calc(50% - 3px);
 }
 .content a {
   font-size: inherit;
