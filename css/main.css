@@ -766,6 +766,9 @@ svg {
   height: auto;
   margin-bottom: 0.7rem;
 }
+.content__image._sm {
+  width: 150px;
+}
 .content__youtube {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1245,6 +1248,9 @@ body {
     max-width: 550px;
   }
 
+  .content__image._sm {
+    width: 120px;
+  }
   .content__group {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

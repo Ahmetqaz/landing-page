@@ -162,6 +162,9 @@
       height: auto;
       margin-bottom: 0.7rem;
     }
+    &._sm {
+      width: 150px;
+    }
   }
   &__youtube {
     display: flex;
@@ -296,6 +299,11 @@
     }
   }
   .content {
+    &__image {
+      &._sm {
+        width: 120px;
+      }
+    }
     &__group {
       flex-direction: column;
       .content__image {
