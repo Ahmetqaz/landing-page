@@ -49,8 +49,9 @@
   @include layouts-580;
 }
 @media (max-width: 460px) {
-  html {
-    font-size: 16px;
+  html,
+  body {
+    font-size: 14px;
   }
   @include index-460;
 }

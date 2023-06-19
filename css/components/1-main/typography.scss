@@ -48,3 +48,9 @@ p {
   font-size: 1rem;
   line-height: 1.2;
 }
+
+.font {
+  &--regular {
+    font-weight: 400;
+  }
+}
