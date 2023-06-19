@@ -19,7 +19,6 @@
       padding: 20px 0;
     }
   }
-
   &Content {
     overflow: hidden;
     display: flex;
@@ -49,7 +48,7 @@
       }
     }
     &._lg {
-      .land {
+      .grid {
         &Content {
           &__body {
             &-image {
@@ -72,48 +71,48 @@
     }
   }
 }
-.grid {
-  display: flex;
-  justify-content: space-between;
+// .grid {
+//   display: flex;
+//   justify-content: space-between;
   
-  gap: 20px 15px;
-  &__image {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    &._sm {
-      &-extra {
-        width: calc(60% - 10px);
-        max-width: 440px;
-      }
-    }
-  }
-  &__box {
-    width: calc(40% - 10px);
-    max-width: 288px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    &-image {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-}
+//   gap: 20px 15px;
+//   &__image {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//     &._sm {
+//       &-extra {
+//         width: calc(60% - 10px);
+//         max-width: 440px;
+//       }
+//     }
+//   }
+//   &__box {
+//     width: calc(40% - 10px);
+//     max-width: 288px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     gap: 20px;
+//     &-image {
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: contain;
+//       }
+//     }
+//   }
+// }
 .video {
   display: flex;
   flex-direction: column;
@@ -186,7 +185,7 @@
   }
 }
 @mixin index-1240 {
-  .land {
+  .grid {
     &__inner {
       &-group {
         width: 150px;
@@ -203,7 +202,7 @@
   }
 }
 @mixin index-1160 {
-  .land {
+  .grid {
     &__inner {
       &-group {
         width: 130px;
@@ -229,7 +228,7 @@
         }
       }
       &._lg {
-        .land {
+        .grid {
           &Content {
             &__box {
               .video {
@@ -244,7 +243,7 @@
   }
 }
 @mixin index-840 {
-  .land {
+  .grid {
     padding: 0;
     &__inner {
       &-group {
@@ -258,7 +257,7 @@
   }
 }
 @mixin index-580 {
-  .land {
+  .grid {
     &__inner {
       &-group {
         width: 110px;
@@ -306,7 +305,7 @@
   }
 }
 @mixin index-460 {
-  .land {
+  .grid {
     &__inner {
       &-group {
         width: 100%;
