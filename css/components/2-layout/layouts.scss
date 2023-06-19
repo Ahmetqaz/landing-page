@@ -163,17 +163,25 @@
     max-width: 820px;
     img {
       width: 100%;
-      height: auto;
       margin-bottom: 0.7rem;
     }
     &._sm {
       width: 150px;
+    }
+    &._lg{
+      height:100%;
+      img{
+        height: 100%;
+        margin-bottom: 0;
+      }
     }
   }
   &__youtube {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    @include transition;
+    cursor: pointer;
     p {
       font-size: 16px;
     }
@@ -212,7 +220,10 @@
         height: 100%;
       }
     }
-    
+    &:hover{
+      opacity: .7;
+    }
+
   }
   &__group {
     display: flex;
