@@ -816,23 +816,29 @@ svg {
   html {
     font-size: 18px;
   }
-
   .autoContainer {
     padding: 0 20px;
   }
+<<<<<<< HEAD
 
   .main--land {
+=======
+  .main--grid {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     padding-left: 250px;
   }
-
   .sidebar {
     width: 250px;
   }
   .sidebar__inner {
     padding: 35px 20px 20px;
   }
+<<<<<<< HEAD
 
   .land__inner-group {
+=======
+  .grid__inner-group {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     width: 150px;
   }
   .land__inner-content {
@@ -847,11 +853,14 @@ svg {
     width: 4px;
     height: 4px;
   }
+<<<<<<< HEAD
 
   .main--land {
+=======
+  .main--grid {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     padding-left: 220px;
   }
-
   .sidebar {
     width: 220px;
   }
@@ -863,8 +872,12 @@ svg {
     left: 0;
     height: 100%;
   }
+<<<<<<< HEAD
 
   .land__inner-group {
+=======
+  .grid__inner-group {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     width: 130px;
   }
   .land__inner-content {
@@ -902,14 +915,12 @@ svg {
     padding: 70px 0 30px 0;
     height: auto;
   }
-
   .header {
     display: block;
   }
   .header__inner .burger {
     display: block;
   }
-
   .sidebar._burger {
     position: fixed;
     top: 51px;
@@ -946,8 +957,12 @@ svg {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
+<<<<<<< HEAD
 
   .land {
+=======
+  .grid {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     padding: 0;
   }
   .land__inner-group {
@@ -962,12 +977,15 @@ svg {
   ::-webkit-scrollbar {
     display: none;
   }
-
   .autoContainer {
     padding: 0 15px;
   }
+<<<<<<< HEAD
 
   .land__inner-group {
+=======
+  .grid__inner-group {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     width: 110px;
   }
   .land__inner-content {
@@ -1010,12 +1028,19 @@ svg {
   html {
     font-size: 16px;
   }
+<<<<<<< HEAD
 
   .main--land {
     padding: 70px 0 140px 0;
   }
 
   .land__inner-group {
+=======
+  .main--grid {
+    padding: 70px 0 140px 0;
+  }
+  .grid__inner-group {
+>>>>>>> 212ce4a465144c42f65e9c154d66bdb2e2947573
     width: 100%;
     height: 110px;
     position: fixed;
