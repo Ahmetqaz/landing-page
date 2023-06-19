@@ -186,6 +186,16 @@
     }
   }
 }
+.tabs {
+  &__item {
+    display: none;
+    animation: 0.3s ease-out animInUp;
+
+    &.active {
+      display: block;
+    }
+  }
+}
 
 @mixin layouts-1280 {
   .main {
