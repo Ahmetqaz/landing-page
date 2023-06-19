@@ -738,6 +738,10 @@ svg {
   width: calc(40% - 1em);
   max-width: 14.5em;
 }
+.column--middle {
+  width: calc(40% - 1em);
+  max-width: 350px;
+}
 
 .content {
   display: -webkit-box;
@@ -1217,6 +1221,9 @@ body {
     width: calc(60% - 0.75em);
   }
   .column--smaller {
+    width: calc(40% - 0.75em);
+  }
+  .column--middle {
     width: calc(40% - 0.75em);
   }
 

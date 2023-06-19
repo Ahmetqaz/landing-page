@@ -146,6 +146,10 @@
     width: calc(40% - 1em);
     max-width: 14.5em;
   }
+  &--middle {
+    width: calc(40% - 1em);
+    max-width: 350px;
+  }
 }
 .content {
   display: flex;
@@ -281,6 +285,9 @@
     gap: 1em;
     width: calc(60% - 0.75em);
     &--smaller {
+      width: calc(40% - 0.75em);
+    }
+    &--middle{
       width: calc(40% - 0.75em);
     }
   }
