@@ -742,6 +742,10 @@ svg {
   width: calc(40% - 1em);
   max-width: 14.5em;
 }
+.column--middle {
+  width: calc(40% - 1em);
+  max-width: 350px;
+}
 
 .content {
   display: -webkit-box;
@@ -1213,6 +1217,13 @@ body {
   .column--smaller {
     width: calc(40% - 0.75em);
   }
+<<<<<<< HEAD
+  .column--middle {
+    width: calc(40% - 0.75em);
+  }
+
+=======
+>>>>>>> 33a056e9db82fa82c2f943d158cce806f74de532
   .content {
     gap: 1em;
   }
