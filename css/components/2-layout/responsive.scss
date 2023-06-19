@@ -1,35 +1,42 @@
-@media (max-width: 1240px) {
-  html {
+@media (max-width: 1460px) {
+  html,
+  body {
     font-size: 18px;
   }
-  .autoContainer {
-    padding: 0 20px;
-  }
-  @include typography-1240;
-  @include components-1240;
-  @include header-1240;
   @include index-1240;
+}
+@media (max-width: 1280px) {
+  @include header-1280;
+  @include layouts-1280;
+}
+@media (max-height: 768px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 @media (max-width: 1160px) {
   ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
   }
-  @include components-1160;
+  @include layouts-1160;
   @include header-1160;
   @include index-1160;
 }
 @media (max-width: 1025px) {
   // @include header-1025;
+  @include header-1025;
+  @include layouts-1025;
 }
 @media (max-width: 940px) {
 }
 @media (max-width: 840px) {
-  @include components-840;
-  @include header-840;
   @include index-840;
+  @include layouts-840;
 }
 @media (max-width: 768px) {
+  @include layouts-768;
 }
 @media (max-width: 580px) {
   ::-webkit-scrollbar {
@@ -39,12 +46,11 @@
     padding: 0 15px;
   }
   @include index-580;
+  @include layouts-580;
 }
 @media (max-width: 460px) {
   html {
     font-size: 16px;
   }
-  @include typography-460;
-  @include components-460;
   @include index-460;
 }

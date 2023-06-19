@@ -1,9 +1,6 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  padding: 15px 0;
+  padding: 0.75em 0;
   z-index: 1;
   transition: 0.2s ease-out;
   transition-property: opacity, transform, padding;
@@ -13,19 +10,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 1.5rem;
     z-index: 2;
 
     .burger {
       display: none;
     }
-  }
-  &.sticky {
-    position: fixed;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba($secondary, 0.4);
-    animation: 0.3s sticky ease-in;
-    transition-duration: 0.5s;
   }
   display: none;
 }
@@ -36,14 +26,15 @@
   left: 0;
   z-index: 5;
   height: 100%;
-  width: 270px;
+  width: 16em;
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1em;
     width: 100%;
     position: relative;
-    padding: 40px 25px 25px;
+    padding: 2.5em;
+
     &-logo {
       width: 100%;
       display: flex;
@@ -58,55 +49,56 @@
         opacity: 0.7;
       }
     }
-    &-group {
+    &-links {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 18px;
+      gap: 0.5em;
     }
     &-link {
-      font-size: 20px;
+      font-size: 1em;
+      line-height: 1.2;
+      padding: 0.2em 0;
+      letter-spacing: -0.05em;
       color: $black-2;
-      @include transition;
       position: relative;
+      transition: 0.25s ease-in;
+
       &:after {
         content: "";
-        width: 100%;
+        width: 10%;
         height: 1px;
-        background: $primary;
+        background: currentColor;
         position: absolute;
-        left: 50%;
-        bottom: -5px;
-        transform: translate(-50%) scale(0);
+        left: 0;
+        top: 100%;
         opacity: 0;
-        @include transition;
+        transition: 0.3s ease-out;
       }
       &:hover {
-        color: $primary;
+        color: $black;
+        letter-spacing: 0.05em;
+
         &:after {
-          transform: translate(-50%) scale(1);
-          opacity: 1;
+          opacity: 0.4;
+          width: 90%;
+        }
+      }
+      &.active {
+        color: $black;
+        letter-spacing: 0.1em;
+
+        &:after {
+          display: none;
         }
       }
     }
     &-copy {
       font-size: 18px;
-      color: $black-2;
-      transform: rotate(180deg);
+      color: $black-3;
+      transform: rotate(180deg) translate(0.25em);
       font-style: italic;
       writing-mode: vertical-rl;
-    }
-  }
-  &._lg {
-    top: 25px;
-    left: 25px;
-    height: calc(100% - 25px);
-    padding: 25px;
-    .sidebar {
-      &__inner {
-        height: 100%;
-        padding: unset;
-      }
     }
   }
 }
@@ -126,9 +118,8 @@
     position: absolute;
     left: 50%;
     width: 100%;
-    height: 0.32em;
+    height: 0.4em;
     background-color: currentColor;
-    border-radius: 0.4em;
     transition: all 0.3s ease;
   }
   span {
@@ -168,70 +159,91 @@
     }
   }
 }
-@mixin header-1240 {
+
+@mixin header-1280 {
   .sidebar {
-    width: 250px;
+    width: 13em;
     &__inner {
-      padding: 35px 20px 20px;
+      padding: 1.8em;
     }
   }
 }
 @mixin header-1160 {
   .sidebar {
-    width: 220px;
+    width: 10em;
     &__inner {
-      &-link {
-        font-size: 18px;
-      }
-    }
-    &._lg {
-      top: 0;
-      left: 0;
-      height: 100%;
+      padding: 1.8em 1.2em;
     }
   }
 }
-@mixin header-840 {
+@mixin header-1025 {
   .header {
     display: block;
     &__inner {
+      display: flex;
+      justify-content: space-between;
+      &-logo {
+        height: 2rem;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transition;
+        img {
+          height: 100%;
+          width: auto;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
       .burger {
         display: block;
       }
     }
   }
   .sidebar {
-    &._burger {
-      position: fixed;
-      top: 51px;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 51px);
-      background: rgba($black, 0.4);
-      backdrop-filter: blur(4px);
-      transform: translate(100%);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    position: fixed;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 51px);
+    background: $white;
+    transform: translate(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    &__inner {
+      width: 220px;
+      height: 100%;
+      &-logo {
+        display: none;
+      }
+    }
+    &.active {
+      pointer-events: all;
+      transform: translate(0);
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &--visible {
+      pointer-events: all;
+      transform: unset;
+      opacity: 1;
+      background: transparent;
+      top: 0;
+      height: 100%;
       .sidebar {
         &__inner {
-          width: 220px;
-          height: 100%;
-          background: $white;
-        }
-      }
-      &.active {
-        pointer-events: all;
-        transform: translate(0);
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-
-        .nav__inner {
-          opacity: 1;
-          transition: 0.3s ease-in-out 0.05s;
-          transform: translate(0);
+          &-logo {
+            display: flex;
+          }
         }
       }
     }
   }
+}
+
+@mixin header-height-768 {
 }
