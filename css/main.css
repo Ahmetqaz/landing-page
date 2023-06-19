@@ -792,12 +792,12 @@ svg {
   text-decoration: underline !important;
 }
 
-.grid {
+.land {
   padding: 20px 0;
   max-width: 1025px;
   width: 100%;
 }
-.grid__inner {
+.land__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -805,7 +805,7 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.grid__inner-group {
+.land__inner-group {
   width: 170px;
   position: relative;
   overflow: auto;
@@ -816,7 +816,7 @@ svg {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.grid__inner-content {
+.land__inner-content {
   width: calc(100% - 210px);
   padding: 20px 0;
 }
@@ -836,17 +836,60 @@ svg {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.gridContent__body {
+.landContent__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+}
+.landContent__box > p {
+  width: calc(100% - 325px);
+}
+.landContent__box-image {
+  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px;
+}
+.landContent__box-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.landContent._lg .landContent__body-image {
+  width: 100%;
+  max-width: unset;
+}
+.landContent._lg .landContent__box .video {
+  padding-top: 25px;
+}
+.landContent.active {
+  max-height: unset;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20px 15px;
 }
-.gridContent__body-image {
-  width: calc(60% - 10px);
-  max-width: 440px;
+.grid__image {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -857,13 +900,17 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.gridContent__body-image img {
+.grid__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.gridContent__body-box {
+.grid__image._sm-extra {
+  width: calc(60% - 10px);
+  max-width: 440px;
+}
+.grid__box {
   width: calc(40% - 10px);
   max-width: 288px;
   display: -webkit-box;
@@ -878,7 +925,7 @@ svg {
           justify-content: space-between;
   gap: 20px;
 }
-.gridContent__body-box-image {
+.grid__box-image {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -890,35 +937,87 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.gridContent__body-box-image img {
+.grid__box-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.gridContent__box {
+
+.video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  position: relative;
 }
-.gridContent__box > p {
-  width: calc(100% - 325px);
+.video__box {
+  width: 135px;
+  height: 85px;
+  position: relative;
 }
-.gridContent._lg .gridContent__body-image {
+.video__box-image {
   width: 100%;
-  max-width: unset;
+  height: 100%;
 }
-.gridContent._lg .gridContent__box .video {
-  padding-top: 25px;
+.video__box-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
-.gridContent.active {
-  max-height: unset;
-  opacity: 1;
-  pointer-events: all;
+.video__box-button {
+  color: #ff0000;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.video__box-button::before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.video__box-button svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.video__box-button:hover {
+  opacity: 0.7;
+}
+.video p {
+  font-size: 16px;
+  line-height: 1em;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.video p:hover {
+  color: #2a6495;
 }
 
 @media (max-width: 1460px) {
@@ -929,10 +1028,10 @@ body {
   .grid__inner-group {
     width: 150px;
   }
-  .grid__inner-content {
+  .land__inner-content {
     width: calc(100% - 170px);
   }
-  .gridItem__wrapper {
+  .landItem__wrapper {
     padding-right: 15px;
   }
 }
@@ -970,35 +1069,41 @@ body {
   .main {
     padding-left: 10em;
   }
+
   .sidebar {
     width: 10em;
   }
   .sidebar__inner {
     padding: 1.8em 1.2em;
   }
-  .grid__inner-group {
+
+  .land__inner-group {
     width: 130px;
   }
-  .grid__inner-content {
+  .land__inner-content {
     width: calc(100% - 150px);
   }
-  .gridContent__box {
+  .landContent__box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
   }
-  .gridContent__box .video {
+  .landContent__box .video {
     padding-top: 0;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
   }
-  .gridContent__box p {
+  .landContent__box p {
     width: 100%;
   }
-  .gridContent._lg .gridContent__box .video {
+  .landContent__box-image {
+    width: 130px;
+    padding: 0;
+  }
+  .landContent._lg .landContent__box .video {
     padding-top: 0;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -1112,11 +1217,11 @@ body {
   .grid {
     padding: 0;
   }
-  .grid__inner-group {
+  .land__inner-group {
     top: 70px;
     height: calc(100vh - 100px);
   }
-  .grid__inner-content {
+  .land__inner-content {
     padding: 0;
   }
 }
@@ -1136,34 +1241,47 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+
   .autoContainer {
     padding: 0 15px;
   }
-  .grid__inner-group {
+
+  .land__inner-group {
     width: 110px;
   }
-  .grid__inner-content {
+  .land__inner-content {
     width: calc(100% - 125px);
   }
-  .gridContent__body {
+  .landContent__box-image {
+    width: 100px;
+  }
+  .landItem__wrapper {
+    padding-right: 0;
+    gap: 15px;
+  }
+
+  .grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 15px;
   }
-  .gridContent__body-box {
+  .grid__image._sm-extra {
+    width: 100%;
+    max-width: unset;
+  }
+  .grid__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
     max-width: unset;
+    width: 100%;
   }
-  .gridContent__body-box-image {
+  .grid__box-image {
     width: 100px;
   }
-  .gridContent__body-box .video {
+  .grid__box .video {
     width: calc(100% - 120px);
   }
   .gridContent__body-image {
@@ -1247,7 +1365,7 @@ body {
   }
   .grid__inner-group {
     width: 100%;
-    height: 120px;
+    height: 110px;
     position: fixed;
     top: unset;
     bottom: 0;
@@ -1259,21 +1377,21 @@ body {
     padding: 15px 15px;
     border-top: 1px solid #cccccc;
   }
-  .grid__inner-content {
+  .land__inner-content {
     width: 100%;
   }
-  .gridItem {
+  .landItem {
     min-width: 100px;
   }
-  .gridItem__image {
+  .landItem__image {
     height: 50px;
   }
-  .gridItem__image img {
+  .landItem__image img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .gridItem__wrapper {
+  .landItem__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
