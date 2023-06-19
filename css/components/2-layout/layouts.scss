@@ -212,6 +212,7 @@
         height: 100%;
       }
     }
+    
   }
   &__group {
     display: flex;
@@ -225,6 +226,10 @@
           height: 100%;
         }
       }
+    }
+    &-box{
+      display: flex;
+      flex-direction: column;
     }
   }
   a {

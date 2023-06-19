@@ -841,6 +841,15 @@ svg {
 .content__group .content__image img {
   height: 100%;
 }
+.content__group-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .content a {
   font-size: inherit;
   line-height: inherit;
@@ -1031,6 +1040,7 @@ svg {
 body {
     font-size: 18px;
   }
+
   .grid__inner-group {
     width: 150px;
   }
@@ -1048,6 +1058,7 @@ body {
   .sidebar__inner {
     padding: 1.8em;
   }
+
   .main {
     padding-left: 13em;
   }
@@ -1057,6 +1068,7 @@ body {
   .main__inner-body {
     padding: 1.8em;
   }
+
   .scrollBar {
     width: 6.5em;
   }
@@ -1072,15 +1084,18 @@ body {
     width: 6px;
     height: 6px;
   }
+
   .main {
     padding-left: 10em;
   }
+
   .sidebar {
     width: 10em;
   }
   .sidebar__inner {
     padding: 1.8em 1.2em;
   }
+
   .grid__inner-group {
     width: 130px;
   }
@@ -1153,6 +1168,7 @@ body {
   .header__inner .burger {
     display: block;
   }
+
   .sidebar {
     position: fixed;
     top: 51px;
@@ -1196,6 +1212,7 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+
   .main {
     padding-left: 1.5rem;
     height: calc(100% - 3.5rem);
@@ -1203,9 +1220,11 @@ body {
   .main__inner-body {
     padding: 1em 1.5em;
   }
+
   .row {
     gap: 1.5rem;
   }
+
   .column {
     gap: 1em;
     width: calc(60% - 0.75em);
@@ -1213,13 +1232,10 @@ body {
   .column--smaller {
     width: calc(40% - 0.75em);
   }
-<<<<<<< HEAD
   .column--middle {
     width: calc(40% - 0.75em);
   }
 
-=======
->>>>>>> 33a056e9db82fa82c2f943d158cce806f74de532
   .content {
     gap: 1em;
   }
@@ -1265,9 +1281,11 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+
   .autoContainer {
     padding: 0 15px;
   }
+
   .grid__inner-group {
     width: 110px;
   }
@@ -1281,6 +1299,7 @@ body {
     padding-right: 0;
     gap: 15px;
   }
+
   .grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1305,6 +1324,7 @@ body {
   .grid__box .video {
     width: calc(100% - 120px);
   }
+
   .main {
     padding-left: 0;
   }
@@ -1377,6 +1397,7 @@ body {
   html {
     font-size: 16px;
   }
+
   .grid__inner-group {
     width: 100%;
     height: 110px;
