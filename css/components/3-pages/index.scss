@@ -20,7 +20,7 @@
     }
   }
 }
-.grid {
+.land {
   padding: 20px 0;
   max-width: 1025px;
   width: 100%;
@@ -70,51 +70,27 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease-in-out;
-    &__body {
-      display: flex;
-      justify-content: space-between;
-      &-image {
-        width: calc(60% - 10px);
-        max-width: 440px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      &-box {
-        width: calc(40% - 10px);
-        max-width: 288px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 20px;
-        &-image {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-        }
-      }
-    }
     &__box {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 20px;
       & > p {
         width: calc(100% - 325px);
       }
+      &-image {
+        width: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
     &._lg {
-      .grid {
+      .land {
         &Content {
           &__body {
             &-image {
@@ -137,8 +113,120 @@
     }
   }
 }
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 15px;
+  &__image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &._sm {
+      &-extra {
+        width: calc(60% - 10px);
+        max-width: 440px;
+      }
+    }
+  }
+  &__box {
+    width: calc(40% - 10px);
+    max-width: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    &-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.video {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  &__box {
+    width: 135px;
+    height: 85px;
+    position: relative;
+    &-image {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+      }
+    }
+    &-button {
+      color: $red;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      cursor: pointer;
+      @include transition;
+      &::before {
+        content: "";
+        width: 90%;
+        height: 90%;
+        background: $white;
+        border-radius: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  // a {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   opacity: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index:2;
+  // }
+  p {
+    font-size: 16px;
+    line-height: 1em;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
 @mixin index-1240 {
-  .grid {
+  .land {
     &__inner {
       &-group {
         width: 150px;
@@ -155,7 +243,7 @@
   }
 }
 @mixin index-1160 {
-  .grid {
+  .land {
     &__inner {
       &-group {
         width: 130px;
@@ -175,9 +263,13 @@
         p {
           width: 100%;
         }
+        &-image {
+          width: 130px;
+          padding: 0;
+        }
       }
       &._lg {
-        .grid {
+        .land {
           &Content {
             &__box {
               .video {
@@ -192,7 +284,7 @@
   }
 }
 @mixin index-840 {
-  .grid {
+  .land {
     padding: 0;
     &__inner {
       &-group {
@@ -206,7 +298,7 @@
   }
 }
 @mixin index-580 {
-  .grid {
+  .land {
     &__inner {
       &-group {
         width: 110px;
@@ -216,22 +308,9 @@
       }
     }
     &Content {
-      &__body {
-        flex-direction: column;
-        gap: 15px;
-        &-box {
-          flex-direction: row;
-          width: 100%;
-          max-width: unset;
-          &-image {
-            width: 100px;
-          }
-          .video {
-            width: calc(100% - 120px);
-          }
-        }
+      &__box {
         &-image {
-          width: 100%;
+          width: 100px;
         }
       }
     }
@@ -242,13 +321,36 @@
       }
     }
   }
+  .grid {
+    flex-direction: column;
+
+    &__image {
+      &._sm {
+        &-extra {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+    &__box {
+      flex-direction: row;
+      max-width: unset;
+      width: 100%;
+      &-image {
+        width: 100px;
+      }
+      .video {
+        width: calc(100% - 120px);
+      }
+    }
+  }
 }
 @mixin index-460 {
-  .grid {
+  .land {
     &__inner {
       &-group {
         width: 100%;
-        height: 120px;
+        height: 110px;
         position: fixed;
         top: unset;
         bottom: 0;
