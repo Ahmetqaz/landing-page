@@ -206,6 +206,20 @@
       }
     }
   }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 765px;
+    .content {
+      &__image {
+        width: calc(50% - 2.5px);
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
   a {
     font-size: inherit;
     line-height: inherit;
@@ -279,6 +293,14 @@
     .column {
       width: 100%;
       max-width: 550px;
+    }
+  }
+  .content {
+    &__group {
+      flex-direction: column;
+      .content__image {
+        width: 100%;
+      }
     }
   }
 }
