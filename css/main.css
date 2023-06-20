@@ -654,7 +654,6 @@ svg {
 .scrollBar {
   width: 8.5em;
   top: 0;
-  left: 0;
   position: absolute;
   padding: 1em 0;
   height: 100%;
@@ -738,13 +737,25 @@ svg {
   width: calc(60% - 1em);
   max-width: 22em;
 }
+.column._half {
+  width: calc(50% - 1em);
+}
+.column._lg {
+  max-width: 28em;
+}
 .column--smaller {
   width: calc(40% - 1em);
   max-width: 14.5em;
 }
+.column--smaller._lg {
+  max-width: 11em;
+}
 .column--middle {
   width: calc(40% - 1em);
   max-width: 350px;
+}
+.column__box p {
+  text-indent: 3.5em;
 }
 
 .content {
@@ -767,15 +778,31 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 820px;
+  max-width: 41em;
 }
 .content__image img {
   width: 100%;
-  height: auto;
   margin-bottom: 0.7rem;
 }
 .content__image._sm {
   width: 150px;
+}
+.content__image._lg {
+  height: 100%;
+  max-width: 41em;
+}
+.content__image._lg img {
+  height: 100%;
+  margin-bottom: 0;
+}
+.content__image._bio {
+  max-width: 185px;
+}
+.content__image._bio img {
+  margin-bottom: 0;
+}
+.content__image._low {
+  max-width: 670px;
 }
 .content__youtube {
   display: -webkit-box;
@@ -786,6 +813,11 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.7rem;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  overflow: hidden;
 }
 .content__youtube p {
   font-size: 16px;
@@ -830,17 +862,20 @@ svg {
   width: 100%;
   height: 100%;
 }
+.content__youtube:hover {
+  opacity: 0.7;
+}
 .content__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5px;
-  max-width: 765px;
+  gap: 20px;
+  max-width: 875px;
 }
 .content__group .content__image {
-  width: calc(50% - 2.5px);
+  width: calc(50% - 11px);
 }
 .content__group .content__image img {
   height: 100%;
@@ -853,6 +888,12 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.content__group._sm {
+  gap: 5px;
+}
+.content__group._sm .content__image {
+  width: calc(50% - 3px);
 }
 .content a {
   font-size: inherit;
