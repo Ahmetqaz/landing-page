@@ -10,27 +10,37 @@
   </head>
 
   <body>
-    <div class="main">
+    <div class="main main--full">
       <nav class="sidebar sidebar--visible">
         <div class="sidebar__inner">
-          <div class="sidebar__inner-logo">
+          <a href="/" class="sidebar__inner-logo">
             <img src="./images/logo.png" alt="" />
-          </div>
+          </a>
           <div class="sidebar__inner-links">
             <a href="/works" class="sidebar__inner-link"> Works </a>
-            <a href="/about" class="sidebar__inner-link "> About </a>
+            <a href="/about" class="sidebar__inner-link"> About </a>
             <a href="/bio" class="sidebar__inner-link"> Writting </a>
             <a href="/about/#news" class="sidebar__inner-link"> News </a>
             <a href="/bio/#contact" class="sidebar__inner-link"> Contact </a>
           </div>
           <p class="sidebar__inner-copy">
-            Copyright © 2023 D.D. Cain All Rights Reserved
+            Copyright <span>©</span> 2023 D.D. Cain All Rights Reserved
           </p>
         </div>
       </nav>
       <div class="bg bg--main">
         <div class="bg__image">
-          <img src="./images/hero.png" alt="" />
+          <picture>
+            <source
+              srcset="./images/hero-small-short.png"
+              media="(max-width: 620px) and  (orientation: portrait)"
+            />
+            <source
+              srcset="./images/hero-small.png"
+              media="(max-width: 1025px)"
+            />
+            <img src="./images/hero.webp" alt="hero" />
+          </picture>
         </div>
       </div>
     </div>

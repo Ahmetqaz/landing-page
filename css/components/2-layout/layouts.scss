@@ -13,10 +13,18 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    img {
+    & > picture,
+    & > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    picture {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   &--main {
@@ -68,8 +76,11 @@
     &-body {
       height: 100%;
       overflow: auto;
-      padding: 2em;
+      padding: 2.5em 2em;
     }
+  }
+  &--full {
+    height: 100% !important;
   }
 }
 .autoContainer {
@@ -299,6 +310,9 @@
   flex-direction: column;
   gap: 1em;
 
+  h6 {
+    margin-top: 1.5rem;
+  }
   &__row {
     display: flex;
     align-items: center;

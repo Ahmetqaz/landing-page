@@ -99,6 +99,11 @@
       transform: rotate(180deg) translate(0.25em);
       font-style: italic;
       writing-mode: vertical-rl;
+
+      span {
+        display: inline-block;
+        transform: rotate(90deg);
+      }
     }
   }
 }

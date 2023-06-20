@@ -386,6 +386,11 @@ svg {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
 }
+.sidebar__inner-copy span {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
 
 .burger {
   cursor: pointer;
@@ -471,7 +476,13 @@ svg {
   height: 100%;
   z-index: -1;
 }
-.bg__image img {
+.bg__image > picture, .bg__image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bg__image picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -528,7 +539,10 @@ svg {
 .main__inner-body {
   height: 100%;
   overflow: auto;
-  padding: 2em;
+  padding: 2.5em 2em;
+}
+.main--full {
+  height: 100% !important;
 }
 
 .autoContainer {
@@ -811,6 +825,9 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1em;
+}
+.gallery h6 {
+  margin-top: 1.5rem;
 }
 .gallery__row {
   display: -webkit-box;
