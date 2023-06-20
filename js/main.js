@@ -29,37 +29,71 @@ if (header)
     }
   });
 
-
 /// Tab
 const tabBtn = document.querySelectorAll(".tabBtn");
-if(tabBtn){
-  const tabEvent = document.querySelectorAll(".tabEvent");
-tabBtn.forEach((e) => {
-  onTabClick(tabBtn, tabEvent, e);
-});
-function onTabClick(tabBtns, tabItems, item) {
-  item.addEventListener("click", function (e) {
-    let currentBtn = item;
-    let tabId = currentBtn.getAttribute("data-tab");
-    let currentTab = document.querySelector(tabId);
-    if (currentBtn.classList.contains("active")) {
-      console.log("now active");
-      const faq = currentBtn.parentElement.querySelector(".tabEvent");
-      if (faq) {
-        faq.classList.remove("active");
-        currentBtn.classList.remove("active");
-      }
-    } else if (!currentBtn.classList.contains("active")) {
-      tabBtns.forEach(function (item) {
-        item.classList.remove("active");
-      });
-
-      tabItems.forEach(function (item) {
-        item.classList.remove("active");
-      });
-      currentBtn.classList.add("active");
-      currentTab.classList.add("active");
-    }
+const tabEvent = document.querySelectorAll(".tabEvent");
+const tabsWrapper = document.querySelector(".main__inner-body");
+const scrollTo = (item) => {
+  if (!item) {
+    window.scrollTo(0, 0);
+    tabsWrapper.scrollTo(0, 0);
+    return;
+  }
+  console.log("item", item.offsetTop);
+  window.scrollTo(0, item.offsetTop);
+  tabsWrapper.scrollTo(0, item.offsetTop);
+};
+if (tabBtn && tabBtn.length > 0) {
+  tabBtn.forEach((e) => {
+    onTabClick(tabBtn, tabEvent, e);
   });
+  function onTabClick(tabBtns, tabItems, item) {
+    item.addEventListener("click", function (e) {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.querySelector(tabId);
+      if (!currentBtn.classList.contains("active")) {
+        tabBtns.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        tabItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        currentBtn.classList.add("active");
+        currentTab.classList.add("active");
+        scrollTo(null);
+        if (currentBtn && currentBtn.dataset?.scrollto) {
+          scrollTo(document.querySelector(currentBtn.dataset?.scrollto));
+        }
+      }
+    });
+  }
 }
+const tabNavs = document.querySelectorAll(".tabNav");
+if (tabNavs && tabNavs.length > 0) {
+  tabNavs.forEach(
+    (item) =>
+      (item.onclick = () => {
+        window.location.replace(`/works/${item.dataset?.tab ?? ""}`);
+      })
+  );
+}
+
+if (window.location.hash) {
+  var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+  let activeItem = null;
+  if (hash.startsWith("tab-")) {
+    tabBtn.forEach((item) => {
+      isActive = item.dataset?.tab === `#${hash}`;
+      item.classList.toggle("active", isActive);
+      activeItem = isActive ? item : null;
+    });
+    tabEvent.forEach((item) =>
+      item.classList.toggle("active", item.id === hash)
+    );
+    if (activeItem && activeItem.dataset?.scrollto) {
+      scrollTo(document.querySelector(activeItem.dataset?.scrollto));
+    } else scrollTo(null);
+  }
+  // hash found
 }

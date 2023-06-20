@@ -389,6 +389,16 @@
   }
 }
 @mixin layouts-840 {
+  .gallery {
+    &__row {
+      gap: 0.8em 1em;
+    }
+    &__item {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
 }
 @mixin layouts-768 {
   .row {
@@ -420,6 +430,7 @@
       height: auto;
 
       &-body {
+        padding: 1em 15px;
       }
     }
   }

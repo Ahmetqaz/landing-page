@@ -1222,6 +1222,12 @@ body {
   .grid__inner-content {
     padding: 0;
   }
+  .gallery__row {
+    gap: 0.8em 1em;
+  }
+  .gallery__item p {
+    font-size: 14px;
+  }
 }
 @media (max-width: 768px) {
   .row {
@@ -1297,6 +1303,9 @@ body {
   .main__inner {
     padding: 0;
     height: auto;
+  }
+  .main__inner-body {
+    padding: 1em 15px;
   }
   .scrollBar {
     width: 100%;
