@@ -1,0 +1,13 @@
+
+wideyed
+Jun 23, 2023, 6:52 AM
+
+HyzyrWould you please make these final changes:
++ 1. on navigation menu Writings is misspelled - should be spelled Writings w/ one “t”. It is spelled correctly on my template
++ 2. Please delete text for 14 web pg Cain About and insert new corrected text found at psd file: 14 web pg Cain About v6.psd
++ 3. 3mobile isle scrolling column images load slowly and i know the image files are too big. Can you please reduce the scroller image sizes so they load faster
+4. some friends browsing ddcain.com website website saw “not secure website” message. I didn’t see it. Please check
+5. Please check for any website error messages listed on Host server and correct
+6. After all corrections are uploaded to Inmotion host server please put into Dropbox file copies of all files uploade to host server so I can keep a copy offline. This was stated as a requirement in my Notes at the beginning
+Thank you
+Doug
