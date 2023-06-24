@@ -97,3 +97,24 @@ if (window.location.hash) {
   }
   // hash found
 }
+
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const lazy = entry.target;
+      const img = lazy.querySelector('[loading="lazy"]');
+      const lazyPreloader = lazy.querySelector(".lazy__preloader");
+
+      img.src = img.dataset.srcset;
+      img.onload = () => {
+        lazy.classList.add("done");
+        lazyPreloader.remove();
+      };
+
+      imageObserver.unobserve(lazy);
+    }
+  });
+});
+document.querySelectorAll(".lazy").forEach((lazy) => {
+  imageObserver.observe(lazy);
+});

@@ -94,8 +94,8 @@
       }
     }
     &-copy {
-      font-size: 18px;
-      color: $black-3;
+      font-size: 0.9em;
+      color: rgba($black-3, 0.6);
       transform: rotate(180deg) translate(0.25em);
       font-style: italic;
       writing-mode: vertical-rl;

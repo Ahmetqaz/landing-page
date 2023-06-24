@@ -14,7 +14,7 @@
       <div class="autoContainer">
         <div class="header__inner">
           <a href="/" class="header__inner-logo">
-            <img src="../images/logo.png" alt="" />
+            <img src="../images/logo.png" alt="D.D.CAIN" />
           </a>
           <div class="burger" id="menuBtn">
             <span></span>
@@ -27,7 +27,7 @@
       <nav class="sidebar" id="menu">
         <div class="sidebar__inner">
           <a href="/" class="sidebar__inner-logo">
-            <img src="../images/logo.png" alt="" />
+            <img src="../images/logo.png" alt="D.D.CAIN" />
           </a>
           <div class="sidebar__inner-links">
             <a href="/works" class="sidebar__inner-link active"> Works </a>
@@ -46,11 +46,17 @@
                 <div class="column">
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-1.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-1.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-1.png"
+                          alt="grid-1"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i>David Deporis, Oakland, CA </i></h6>
                       <span>2022</span>
                     </div>
@@ -108,11 +114,17 @@
                 <div class="column column--smaller">
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-sm-1.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-sm-1.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-sm-1.png"
+                          alt="grid-sm-1"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__youtube">
                       <p class="_sm">
@@ -128,8 +140,7 @@
                         <div class="ratioImage">
                           <img
                             src="../images/grid/grid-sm-1.png"
-                            alt=""
-                            loadig="lazy"
+                            alt="youtube poster"
                           />
                         </div>
                         <div class="content__youtube-button">
@@ -151,58 +162,20 @@
                 </div>
               </div>
             </div>
-            <div class="tabs__item tabEvent" id="tab-3">
-              <div class="row">
-                <div class="content">
-                  <div class="content__image">
-                    <img src="../images/grid/grid-2.png" alt="" loadig="lazy" />
-                    <h6><i> Chain of Thought: Portrait of Fascism</i></h6>
-                    <span>2021</span>
-                  </div>
-                  <div class="column">
-                    <p>
-                      The chain can be pulled through all the heads to make an
-                      alarming, clattering sound.
-                    </p>
-                    <p>
-                      Ceramic reinforced with epoxy and impregnated with
-                      synthetic gunpowder aroma oil, pewter paint, chains,
-                      various hardware. 12“ x 18” x 40” ”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tabs__item tabEvent" id="tab-4">
-              <div class="row">
-                <div class="content">
-                  <div class="content__image">
-                    <img src="../images/grid/grid-3.png" alt="" loadig="lazy" />
-                    <h6><i>Rememory</i></h6>
-                    <span>Self-portrait</span>
-                    <span>2019</span>
-                  </div>
-                  <div class="column">
-                    <p>
-                      Prrofiles of the Artist at different ages in different
-                      materials mounted on a log that has various materials
-                      related to the various ages. A pico-projector displays
-                      life events that were ridiculous displays of ego.
-                    </p>
-                    <p>
-                      Wood log, pico projector, sheet metal. acrylic sheet,
-                      buckram fabric, alcohol inks, acrylic paints, various
-                      blades, staples, paper clips, various glues, condom,
-                      various hardware. 9” x 16” x 24”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="tabs__item tabEvent" id="tab-2">
               <div class="content">
                 <div class="content__image">
-                  <img src="../images/grid/grid-4.png" alt="" loadig="lazy" />
+                  <div class="lazy">
+                    <div class="lazy__preloader">
+                      <div class="spinner"></div>
+                      <img src="../images/grid-sm/grid-4.png" />
+                    </div>
+                    <img
+                      data-srcset="../images/grid/grid-4.png"
+                      alt="grid-4"
+                      loading="lazy"
+                    />
+                  </div>
                   <h6><i> Anderson Ranch Connector Portrait 8-5-22</i></h6>
                   <span>Group interactive portrait</span>
                   <span>2022</span>
@@ -255,8 +228,7 @@
                         <div class="ratioImage">
                           <img
                             src="../images/grid/grid-4.png"
-                            alt=""
-                            loadig="lazy"
+                            alt="youtube poster"
                           />
                         </div>
                         <div class="content__youtube-button">
@@ -278,16 +250,90 @@
                 </div>
               </div>
             </div>
+            <div class="tabs__item tabEvent" id="tab-3">
+              <div class="row">
+                <div class="content">
+                  <div class="content__image">
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <div class="spinner"></div>
+                        <img src="../images/grid-sm/grid-2.png" />
+                      </div>
+                      <img
+                        data-srcset="../images/grid/grid-2.png"
+                        alt="grid-2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h6><i> Chain of Thought: Portrait of Fascism</i></h6>
+                    <span>2021</span>
+                  </div>
+                  <div class="column">
+                    <p>
+                      The chain can be pulled through all the heads to make an
+                      alarming, clattering sound.
+                    </p>
+                    <p>
+                      Ceramic reinforced with epoxy and impregnated with
+                      synthetic gunpowder aroma oil, pewter paint, chains,
+                      various hardware. 12“ x 18” x 40” ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__item tabEvent" id="tab-4">
+              <div class="row">
+                <div class="content">
+                  <div class="content__image">
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <div class="spinner"></div>
+                        <img src="../images/grid-sm/grid-3.png" />
+                      </div>
+                      <img
+                        data-srcset="../images/grid/grid-3.png"
+                        alt="grid-3"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h6><i>Rememory</i></h6>
+                    <span>Self-portrait</span>
+                    <span>2019</span>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Prrofiles of the Artist at different ages in different
+                      materials mounted on a log that has various materials
+                      related to the various ages. A pico-projector displays
+                      life events that were ridiculous displays of ego.
+                    </p>
+                    <p>
+                      Wood log, pico projector, sheet metal. acrylic sheet,
+                      buckram fabric, alcohol inks, acrylic paints, various
+                      blades, staples, paper clips, various glues, condom,
+                      various hardware. 9” x 16” x 24”
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="tabs__item tabEvent" id="tab-5">
               <div class="row">
                 <div class="column">
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-5.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-5.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-5.png"
+                          alt="grid-5"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i>Portrait of Ukraine</i></h6>
                       <span>2021</span>
                       <span> Oil pastels, alcohol ink, paper. </span>
@@ -296,11 +342,17 @@
                   </div>
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-7.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-7.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-7.png"
+                          alt="grid-7"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i>Chain of Thought</i></h6>
                       <span>2019</span>
                       <span> Oil pastels, paper. </span>
@@ -309,7 +361,17 @@
                   </div>
                   <div class="content">
                     <div class="content__image">
-                      <img src="../images/grid/grid-9.png" alt="" />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-9.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-9.png"
+                          alt="grid-9"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i>Rememory</i></h6>
                       <span>2018</span>
                       <span> Self-portrait </span>
@@ -323,11 +385,17 @@
                 <div class="column column--middle">
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-6.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-6.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-6.png"
+                          alt="grid-6"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i> Nightmares of a Bleeding Country</i></h6>
                       <span>2020</span>
                       <span> Self-portrait </span>
@@ -339,11 +407,17 @@
                   </div>
                   <div class="content">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-8.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-8.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-8.png"
+                          alt="grid-8"
+                          loading="lazy"
+                        />
+                      </div>
                       <h6><i>Bremner House Study</i></h6>
                       <span>1999</span>
                       <span> Graphite, paper. </span>
@@ -357,11 +431,17 @@
               <div class="row">
                 <div class="content">
                   <div class="content__image _low">
-                    <img
-                      src="../images/grid/grid-10.png"
-                      alt=""
-                      loadig="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <div class="spinner"></div>
+                        <img src="../images/grid-sm/grid-10.png" />
+                      </div>
+                      <img
+                        data-srcset="../images/grid/grid-10.png"
+                        alt="grid-10"
+                        loading="lazy"
+                      />
+                    </div>
                     <h6><i>Portrait of C</i></h6>
                     <span>2021</span>
                     <span> Memorial portrait of those lost to addiction. </span>
@@ -389,7 +469,7 @@
                     <div class="column column--smaller">
                       <div class="content">
                         <div class="content__image _sm">
-                          <img src="../images/mark.png" alt="" loadig="lazy" />
+                          <img src="../images/mark.png" alt="mark" />
                         </div>
                       </div>
                     </div>
@@ -402,18 +482,30 @@
                 <div class="content">
                   <div class="content__group _sm">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-11.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-11.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-11.png"
+                          alt="grid-11"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-11.2.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-11.2.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-11.2.png"
+                          alt="grid-11.2"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__group-box">
                       <h6><i>Pre-election Roadtrip, Bleeding Country</i></h6>
@@ -457,11 +549,17 @@
                             class="content__youtube-image"
                           >
                             <div class="ratioImage">
-                              <img
-                                src="../images/grid/grid-11.png"
-                                alt=""
-                                loadig="lazy"
-                              />
+                              <div class="lazy">
+                                <div class="lazy__preloader">
+                                  <div class="spinner"></div>
+                                  <img src="../images/grid-sm/grid-11.png" />
+                                </div>
+                                <img
+                                  data-srcset="../images/grid/grid-11.png"
+                                  alt="grid-11"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
                             <div class="content__youtube-button">
                               <svg
@@ -489,11 +587,17 @@
                 <div class="content">
                   <div class="row">
                     <div class="content__image _lg">
-                      <img
-                        src="../images/grid/grid-15.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-15.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-15.png"
+                          alt="grid-15"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -519,18 +623,30 @@
                     <div class="column column--smaller _lg">
                       <div class="content">
                         <div class="content__image _lg">
-                          <img
-                            src="../images/grid/grid-15.2.png"
-                            alt=""
-                            loading="lazy"
-                          />
+                          <div class="lazy">
+                            <div class="lazy__preloader">
+                              <div class="spinner"></div>
+                              <img src="../images/grid-sm/grid-15.2.png" />
+                            </div>
+                            <img
+                              data-srcset="../images/grid/grid-15.2.png"
+                              alt="grid-15.2"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                         <div class="content__image _lg">
-                          <img
-                            src="../images/grid/grid-15.3.png"
-                            alt=""
-                            loading="lazy"
-                          />
+                          <div class="lazy">
+                            <div class="lazy__preloader">
+                              <div class="spinner"></div>
+                              <img src="../images/grid-sm/grid-15.3.png" />
+                            </div>
+                            <img
+                              data-srcset="../images/grid/grid-15.3.png"
+                              alt="grid-15.3"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -544,20 +660,32 @@
                   <div class="row">
                     <div class="column">
                       <div class="content__image _lg">
-                        <img
-                          src="../images/grid/grid-13.png"
-                          alt=""
-                          loadig="lazy"
-                        />
+                        <div class="lazy">
+                          <div class="lazy__preloader">
+                            <div class="spinner"></div>
+                            <img src="../images/grid-sm/grid-13.png" />
+                          </div>
+                          <img
+                            data-srcset="../images/grid/grid-13.png"
+                            alt="grid-13"
+                            loading="lazy"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="column column--smaller">
                       <div class="content__image _lg">
-                        <img
-                          src="../images/grid/grid-13.2.png"
-                          alt=""
-                          loadig="lazy"
-                        />
+                        <div class="lazy">
+                          <div class="lazy__preloader">
+                            <div class="spinner"></div>
+                            <img src="../images/grid-sm/grid-13.2.png" />
+                          </div>
+                          <img
+                            data-srcset="../images/grid/grid-13.2.png"
+                            alt="grid-13.2"
+                            loading="lazy"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -586,11 +714,17 @@
                     <div class="column column--smaller">
                       <div class="content">
                         <div class="content__image _lg">
-                          <img
-                            src="../images/grid/grid-13.3.png"
-                            alt=""
-                            loading="lazy"
-                          />
+                          <div class="lazy">
+                            <div class="lazy__preloader">
+                              <div class="spinner"></div>
+                              <img src="../images/grid-sm/grid-13.3.png" />
+                            </div>
+                            <img
+                              data-srcset="../images/grid/grid-13.3.png"
+                              alt="grid-13.3"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -603,18 +737,30 @@
                 <div class="content">
                   <div class="content__group">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-12.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy lazy--fullHeight">
+                        <div class="lazy__preloader">
+                          <img src="../images/grid-sm/grid-12.png" />
+                          <div class="spinner"></div>
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-12.png"
+                          alt="grid-12"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-12.2.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy lazy--fullHeight">
+                        <div class="lazy__preloader">
+                          <img src="../images/grid-sm/grid-12.2.png" />
+                          <div class="spinner"></div>
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-12.2.png"
+                          alt="grid-12.2"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__group-box">
                       <h6><i> Covid on the Mind </i></h6>
@@ -639,18 +785,30 @@
                 <div class="content">
                   <div class="content__group">
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-14.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-14.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-14.png"
+                          alt="grid-14"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__image">
-                      <img
-                        src="../images/grid/grid-14.2.png"
-                        alt=""
-                        loadig="lazy"
-                      />
+                      <div class="lazy">
+                        <div class="lazy__preloader">
+                          <div class="spinner"></div>
+                          <img src="../images/grid-sm/grid-14.2.png" />
+                        </div>
+                        <img
+                          data-srcset="../images/grid/grid-14.2.png"
+                          alt="grid-14.2"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                     <div class="content__group-box">
                       <h6><i> Portrait of Ukraine Puzzle </i></h6>
@@ -676,38 +834,70 @@
                 <h6 class="font--regular">ARCHITECTURE + DESIGN</h6>
                 <div class="gallery__row">
                   <div class="gallery__item _item1">
-                    <img
-                      src="../images/architecture/architecture-1.png"
-                      alt="architecture-1"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-1.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-1.png"
+                        alt="architecture-1"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>Bremner House, Kentfield, CA 1997</i></p>
                   </div>
                   <div class="gallery__item _item2">
-                    <img
-                      src="../images/architecture/architecture-2.png"
-                      alt="architecture-2"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-2.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-2.png"
+                        alt="architecture-2"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>Paradyme Audio-Video, Roseville CA 2000 </i></p>
                   </div>
                 </div>
                 <div class="gallery__row">
                   <div class="gallery__item _item3">
                     <a href="" class="anchor" id="design"></a>
-                    <img
-                      src="../images/architecture/architecture-3.png"
-                      alt="architecture-3"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-3.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-3.png"
+                        alt="architecture-3"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>Modern Roll-top Desk 2002</i></p>
                   </div>
                   <div class="gallery__item _item4">
-                    <img
-                      src="../images/architecture/architecture-4.png"
-                      alt="architecture-4"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-4.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-4.png"
+                        alt="architecture-4"
+                        loading="lazy"
+                      />
+                    </div>
                     <p>
                       <i>Science Cafe, San Francisco State University, 2010</i>
                     </p>
@@ -715,37 +905,69 @@
                 </div>
                 <div class="gallery__row">
                   <div class="gallery__item _item5">
-                    <img
-                      src="../images/architecture/architecture-5.png"
-                      alt="architecture-5"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-5.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-5.png"
+                        alt="architecture-5"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>Love-Box Shop San Francsco CA 2007</i></p>
                   </div>
                   <div class="gallery__item _item6">
-                    <img
-                      src="../images/architecture/architecture-6.png"
-                      alt="architecture-6"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-6.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-6.png"
+                        alt="architecture-6"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>China-California Exhibit, Oakland, CA 1997</i></p>
                   </div>
                 </div>
                 <div class="gallery__row">
                   <div class="gallery__item _item7">
-                    <img
-                      src="../images/architecture/architecture-7.png"
-                      alt="architecture-7"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-7.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-7.png"
+                        alt="architecture-7"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>San Francsco Fair - Internatonal Expo 1987</i></p>
                   </div>
                   <div class="gallery__item _item8">
-                    <img
-                      src="../images/architecture/architecture-8.png"
-                      alt="architecture8"
-                      loading="lazy"
-                    />
+                    <div class="lazy">
+                      <div class="lazy__preloader">
+                        <img
+                          src="../images/architecture-sm/architecture-8.png"
+                        />
+                        <div class="spinner"></div>
+                      </div>
+                      <img
+                        data-srcset="../images/architecture/architecture-8.png"
+                        alt="architecture8"
+                        loading="lazy"
+                      />
+                    </div>
                     <p><i>China to California Exhibit, Oakland, CA 1997</i></p>
                   </div>
                 </div>
@@ -757,73 +979,73 @@
           <div class="scrollBar__inner">
             <div class="scrollBar__item tabBtn" data-tab="#tab-1">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-1.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-1.png" alt="tab-1-image" />
               </div>
               <span>Installation</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-2">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-4.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-4.png" alt="tab-2-image" />
               </div>
               <span>Social Practice</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-3">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-2.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-2.png" alt="tab-3-image" />
               </div>
               <span>Sculpture</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-4">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-3.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-3.png" alt="tab-4-image" />
               </div>
               <span>Wall Hanging</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-5">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-5.1.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-5.1.png" alt="tab-5-image" />
               </div>
               <span>Drawings</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-6">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-10.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-10.png" alt="tab-6-image" />
               </div>
               <span>Installation</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-7">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-11.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-11.png" alt="tab-7-image" />
               </div>
               <span>Wall Hanging</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-8">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-15.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-15.png" alt="tab-8-image" />
               </div>
               <span>Group Performance</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-9">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-13.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-13.png" alt="tab-9-image" />
               </div>
               <span>Wall Hanging</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-10">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-12.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-12.png" alt="tab-10-image" />
               </div>
               <span>Wall Hanging</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-11">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-14.2.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-14.2.png" alt="tab-11-image" />
               </div>
               <span>Wall Hanging</span>
             </div>
             <div class="scrollBar__item tabBtn" data-tab="#tab-12">
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-16.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-16.png" alt="tab-12-image" />
               </div>
               <span>Architecture</span>
             </div>
@@ -833,7 +1055,7 @@
               data-scrollto="#design"
             >
               <div class="scrollBar__item-image">
-                <img src="../images/grid/grid-17.png" alt="" loading="lazy" />
+                <img src="../images/grid-sm/grid-17.png" alt="tab-12-image" />
               </div>
               <span>Design</span>
             </div>
